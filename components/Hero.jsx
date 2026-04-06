@@ -23,7 +23,7 @@ export default function Hero() {
                             animate={{ opacity: 1, scale: 1 }}
                             exit={{ opacity: 0, animation: easeOut }}
                             transition={{ duration: 1 }}
-                            className="absolute top-20 left-0 right-0 flex items-center justify-center bg-transparent bg-opacity-70 h-[calc(100vh-5rem)]"
+                            className=" top-20 left-0 right-0 flex items-center justify-center bg-transparent bg-opacity-70 h-[calc(100vh-5rem)]"
                         >
                             <div className="bg-transparent p-10 rounded-lg text-2xl font-bold flex space-x-2 justify-center items-center ">
                                 <img src="https://i.pinimg.com/originals/f7/be/aa/f7beaa7787bd55e9ac54135566d6af97.gif" alt="" className="h-34" />
@@ -33,7 +33,7 @@ export default function Hero() {
                     )}
                 </AnimatePresence>
 
-                <div className="absolute grid grid-cols-2 gap-20 justify-center h-full items-center">
+                <div className=" grid grid-cols-2 gap-20 justify-center h-full items-center">
                     {!showPopup && (
                         <motion.div
                             className="flex flex-col p-8 mt-32 md:mt- h-full lg:mt-64 max-w-4xl mx-auto text-center md:text-left "
