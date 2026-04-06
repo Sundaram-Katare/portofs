@@ -2,6 +2,7 @@ import Navbar from '../components/Navbar'
 import Hero from '../components/Hero';
 import Projects from '../components/Projects';
 import HighlightsSection from '../components/HighlightsSection';
+import Work from '../components/Work';
 
 export default function Home() {
   return (
@@ -9,6 +10,7 @@ export default function Home() {
       <Navbar />
       <Hero />
       <Projects />
+      <Work />
       <HighlightsSection />
     </div>
   );
