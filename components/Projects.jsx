@@ -2,6 +2,8 @@
 import { motion } from "framer-motion";
 import {gitHub} from 'lucide-react';
 import { ExternalLink } from "lucide-react";
+import { useTheme } from "@/context/ThemeContext";
+import { useState, useEffect } from "react";
 
 const projectData = [
   {
@@ -131,11 +133,11 @@ function ProjectCard({ project, index }) {
       viewport={{ once: true, amount: 0.3 }}
       className="relative group"
     >
-      <div className="overflow-hidden rounded-2xl shadow-lg border border-gray-100 transition-shadow duration-300 group-hover:shadow-2xl">
+      <div className="overflow-hidden rounded-2xl shadow-lg dark:shadow-lg border border-gray-100 dark:border-gray-700 transition-all duration-300 group-hover:shadow-2xl dark:hover:shadow-orange-500/20 dark:hover:shadow-2xl">
         <img
           src={project.imageUrl}
           alt={project.title}
-          className="w-full h-[280px] object-cover object-top transition-transform duration-500 group-hover:scale-105"
+          className="w-full h-64 sm:h-80 md:h-[280px] object-cover object-top transition-transform duration-500 group-hover:scale-105"
         />
       </div>
     </motion.div>
@@ -150,7 +152,7 @@ function ProjectCard({ project, index }) {
       className="flex flex-col justify-center gap-5"
     >
       <motion.span
-        className="text-orange-500 font-semibold text-sm tracking-widest uppercase"
+        className="text-orange-500 font-semibold text-xs sm:text-sm tracking-widest uppercase"
         initial={{ opacity: 0, y: 10 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
@@ -160,7 +162,7 @@ function ProjectCard({ project, index }) {
       </motion.span>
 
       <motion.h3
-        className="text-3xl font-bold text-gray-900"
+        className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 dark:text-white"
         initial={{ opacity: 0, y: 10 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
@@ -170,7 +172,7 @@ function ProjectCard({ project, index }) {
       </motion.h3>
 
       <motion.p
-        className="text-gray-600 leading-relaxed text-base"
+        className="text-gray-600 dark:text-gray-400 leading-relaxed text-sm sm:text-base"
         initial={{ opacity: 0, y: 10 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
@@ -190,7 +192,7 @@ function ProjectCard({ project, index }) {
           href={project.gitHub}
           target="_blank"
           rel="noopener noreferrer"
-          className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-gray-900 text-white text-sm font-medium hover:bg-gray-800 transition-all duration-300 hover:shadow-lg hover:-translate-y-0.5"
+          className="inline-flex items-center gap-2 px-4 sm:px-5 py-2 sm:py-2.5 rounded-full bg-gray-900 dark:bg-gray-700 text-white text-xs sm:text-sm font-medium hover:bg-gray-800 dark:hover:bg-gray-600 transition-all duration-300 hover:shadow-lg hover:-translate-y-0.5"
         >
           {/* <Github size={18} strokeWidth={2} /> */}
           GitHub
@@ -199,7 +201,7 @@ function ProjectCard({ project, index }) {
           href={project.live}
           target="_blank"
           rel="noopener noreferrer"
-          className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-orange-500 text-white text-sm font-medium hover:bg-orange-600 transition-all duration-300 hover:shadow-lg hover:-translate-y-0.5"
+          className="inline-flex items-center gap-2 px-4 sm:px-5 py-2 sm:py-2.5 rounded-full bg-orange-500 hover:bg-orange-600 dark:bg-orange-600 dark:hover:bg-orange-700 text-white text-xs sm:text-sm font-medium transition-all duration-300 hover:shadow-lg hover:-translate-y-0.5"
         >
           <ExternalLink size={18} strokeWidth={2} />
           Live Demo
@@ -209,7 +211,7 @@ function ProjectCard({ project, index }) {
   );
 
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-16 items-center">
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-8 sm:gap-10 md:gap-16 items-center">
       {isEven ? (
         <>
           {imageBlock}
@@ -226,30 +228,39 @@ function ProjectCard({ project, index }) {
 }
 
 export default function Projects() {
+  const [mounted, setMounted] = useState(false);
+  const { theme } = useTheme();
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  if (!mounted) return null;
+  
   return (
-    <section id="projects" className="py-24 px-12 bg-gray-100 rounded-2xl">
+    <section id="projects" className="py-16 sm:py-20 md:py-24 px-4 sm:px-6 md:px-12 lg:px-12 bg-gray-50 dark:bg-[#242424] rounded-2xl md:rounded-3xl transition-colors duration-300">
       {/* Section Heading */}
       <motion.div
-        className="text-center mb-20"
+        className="text-center mb-16 md:mb-20"
         initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, amount: 0.5 }}
         transition={{ duration: 0.6 }}
       >
-        <h2 className="text-4xl md:text-5xl font-bold text-gray-900">
+        <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 dark:text-white">
           Projects{" "}
           <span className="text-orange-500">&amp;</span>{" "}
           My Work
         </h2>
         <div className="mt-4 mx-auto w-20 h-1 bg-orange-500 rounded-full" />
-        <p className="mt-6 text-gray-500 text-lg max-w-2xl mx-auto">
+        <p className="mt-6 text-gray-600 dark:text-gray-400 text-base md:text-lg max-w-2xl mx-auto">
           A showcase of applications I&apos;ve built &mdash; from AI-powered
           tools to full-stack platforms.
         </p>
       </motion.div>
 
       {/* Project Cards */}
-      <div className="flex flex-col gap-24">
+      <div className="flex flex-col gap-16 sm:gap-20 md:gap-24">
         {projectData.map((project, index) => (
           <ProjectCard key={project.id} project={project} index={index} />
         ))}
