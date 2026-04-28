@@ -10,7 +10,7 @@ const workItems = [
         title: "Full Stack Developer",
         company: "Legion Automations",
         description:
-            "Developed and maintained full-stack applications using React, Node.js and cloud services. Led migration of legacy systems to modern microservices architecture.",
+            "Developed and maintained full-stack applications using React, Node.js and cloud services. Built automation workflows and verification systems.",
         tech: ["React", "Node.js", "AWS", "n8n", "Postgres", "Supabase"],
     },
     {
@@ -19,15 +19,15 @@ const workItems = [
         company: "Phicsit",
         description:
             "Built responsive web interfaces and collaborated with design teams to implement pixel-perfect UI components. Improved page load times by 40%.",
-        tech: ["Next.js", "TypeScript", "Tailwind CSS", "MongoDB"],
+        tech: ["Next.js", "TypeScript", "Tailwind CSS", "MERN"],
     },
     {
         date: "Jan 2025 – May 2025",
         title: "Open Source Contributor",
-        company: "Project Name",
+        company: "Open Source Connect India",
         description:
-            "Contributed to open source projects, fixing bugs and implementing new features. Participated in code reviews and documentation improvements.",
-        tech: ["Python", "Git", "Docker"],
+            "Participated in national level Open Source Program, Contributed to open source projects, fixing bugs and implementing new features. Participated in code reviews and documentation improvements.",
+        tech: [],
     },
     // {
     //     date: "Aug 2024 – Dec 2024",

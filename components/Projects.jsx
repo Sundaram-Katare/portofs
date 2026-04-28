@@ -7,6 +7,14 @@ import { useState, useEffect } from "react";
 
 const projectData = [
   {
+    id: 9,
+    title: "FlowSpace",
+    description: "FlowSpace was built with a People-First, Efficiency-Always mindset. In an era where teams are fragmented across multiple tools (one for chat, one for tasks, one for docs), FlowSpace aims to provide a unified workspace.",
+    imageUrl: "./flow.png",
+    gitHub: "https://github.com/Sundaram-Katare/Flow_Space",
+    live: "", 
+  },
+  {
     id: 8,
     title: "Snippify",
     description:
@@ -43,24 +51,6 @@ const projectData = [
     live: "https://lumin-alpha.vercel.app/",
   },
   {
-    id: 7,
-    title: "BuzzNet",
-    description:
-      "BuzzNet Chat App is a full-stack application built for seamless instant messaging between users. It allows people to create or join chat rooms, exchange messages in real time, and stay connected with a clean, responsive UI.",
-    imageUrl: "/buzz.png",
-    gitHub: "https://github.com/Sundaram-Katare/BuzzNet",
-    live: "https://buzz-net-lime.vercel.app/",
-  },
-  {
-    id: 6,
-    title: "Nike Shoe Store",
-    description:
-      "This is a Shoe store's website landing page built using pure HTML, CSS and JavaScript.",
-    imageUrl: "/nike.png",
-    gitHub: "https://github.com/Sundaram-Katare/Nike-Shoe-Store",
-    live: "https://nike-shoe-store-nu.vercel.app/",
-  },
-  {
     id: 3,
     title: "Liluxe",
     description:
@@ -68,15 +58,6 @@ const projectData = [
     imageUrl: "/liluxe.png",
     gitHub: "https://github.com/Sundaram-Katare/Liluxe",
     live: "https://stylespot-orpin.vercel.app/",
-  },
-  {
-    id: 4,
-    title: "Learnzo",
-    description:
-      "E-learning platform for structured topic based learning.",
-    imageUrl: "/learnzo.png",
-    gitHub: "https://github.com/Sundaram-Katare/Learnzo",
-    live: "https://e-learning-rosy-gamma.vercel.app/",
   },
   {
     id: 5,
@@ -194,7 +175,6 @@ function ProjectCard({ project, index }) {
           rel="noopener noreferrer"
           className="inline-flex items-center gap-2 px-4 sm:px-5 py-2 sm:py-2.5 rounded-full bg-gray-900 dark:bg-gray-700 text-white text-xs sm:text-sm font-medium hover:bg-gray-800 dark:hover:bg-gray-600 transition-all duration-300 hover:shadow-lg hover:-translate-y-0.5"
         >
-          {/* <Github size={18} strokeWidth={2} /> */}
           GitHub
         </a>
         <a
@@ -239,7 +219,6 @@ export default function Projects() {
   
   return (
     <section id="projects" className="py-16 sm:py-20 md:py-24 px-4 sm:px-6 md:px-12 lg:px-12 bg-gray-50 dark:bg-[#242424] rounded-2xl md:rounded-3xl transition-colors duration-300">
-      {/* Section Heading */}
       <motion.div
         className="text-center mb-16 md:mb-20"
         initial={{ opacity: 0, y: 30 }}
@@ -259,7 +238,6 @@ export default function Projects() {
         </p>
       </motion.div>
 
-      {/* Project Cards */}
       <div className="flex flex-col gap-16 sm:gap-20 md:gap-24">
         {projectData.map((project, index) => (
           <ProjectCard key={project.id} project={project} index={index} />

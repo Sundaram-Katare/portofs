@@ -26,7 +26,7 @@ export default function Navbar() {
 
     return (
         <>
-            <motion.nav 
+            <motion.nav
                 className="flex justify-between items-center px-4 sm:px-6 md:px-8 py-4 bg-gradient-to-r from-[#D9D7D7] to-[#EDEDED] dark:from-[#2a2a2a] dark:to-[#333333] rounded-2xl sm:rounded-3xl md:rounded-4xl transition-colors"
                 initial={{ opacity: 0, y: -40 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -36,15 +36,14 @@ export default function Navbar() {
                     Sundaram
                 </h1>
 
-                {/* Desktop Menu */}
                 <div className="hidden md:flex items-center justify-between gap-6 lg:gap-8">
                     <h2 className="font-normal text-sm lg:text-lg text-black dark:text-white hover:text-orange-500 dark:hover:text-orange-400 transition cursor-pointer">Home</h2>
                     <h2 className="font-normal text-sm lg:text-lg text-black dark:text-white hover:text-orange-500 dark:hover:text-orange-400 transition cursor-pointer">Projects</h2>
                     <h2 className="font-normal text-sm lg:text-lg text-black dark:text-white hover:text-orange-500 dark:hover:text-orange-400 transition cursor-pointer">Experience</h2>
                     <h2 className="font-normal text-sm lg:text-lg text-black dark:text-white hover:text-orange-500 dark:hover:text-orange-400 transition cursor-pointer">Contacts</h2>
+                    <h2 className="font-normal text-sm lg:text-lg text-black dark:text-white hover:text-orange-500 dark:hover:text-orange-400 transition cursor-pointer">Open Source Work</h2>
                 </div>
 
-                {/* Theme Toggle & Mobile Menu */}
                 <div className="flex items-center gap-3 sm:gap-4">
                     <motion.button
                         onClick={toggleTheme}
@@ -60,8 +59,7 @@ export default function Navbar() {
                         )}
                     </motion.button>
 
-                    {/* Mobile Menu Button */}
-                    <button 
+                    <button
                         onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
                         className="md:hidden p-2 rounded-lg hover:bg-gray-200 dark:hover:bg-[#404040] transition"
                     >
@@ -74,7 +72,6 @@ export default function Navbar() {
                 </div>
             </motion.nav>
 
-            {/* Mobile Menu */}
             {mobileMenuOpen && (
                 <motion.div
                     initial={{ opacity: 0, height: 0 }}
