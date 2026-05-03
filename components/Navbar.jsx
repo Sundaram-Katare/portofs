@@ -37,11 +37,11 @@ export default function Navbar() {
                 </h1>
 
                 <div className="hidden md:flex items-center justify-between gap-6 lg:gap-8">
-                    <h2 className="font-normal text-sm lg:text-lg text-black dark:text-white hover:text-orange-500 dark:hover:text-orange-400 transition cursor-pointer">Home</h2>
-                    <h2 className="font-normal text-sm lg:text-lg text-black dark:text-white hover:text-orange-500 dark:hover:text-orange-400 transition cursor-pointer">Projects</h2>
-                    <h2 className="font-normal text-sm lg:text-lg text-black dark:text-white hover:text-orange-500 dark:hover:text-orange-400 transition cursor-pointer">Experience</h2>
-                    <h2 className="font-normal text-sm lg:text-lg text-black dark:text-white hover:text-orange-500 dark:hover:text-orange-400 transition cursor-pointer">Contacts</h2>
-                    <h2 className="font-normal text-sm lg:text-lg text-black dark:text-white hover:text-orange-500 dark:hover:text-orange-400 transition cursor-pointer">Open Source Work</h2>
+                    <a href="#home" className="font-normal text-sm lg:text-lg text-black dark:text-white hover:text-orange-500 dark:hover:text-orange-400 transition cursor-pointer">Home</a>
+                    <a href="#projects" className="font-normal text-sm lg:text-lg text-black dark:text-white hover:text-orange-500 dark:hover:text-orange-400 transition cursor-pointer">Projects</a>
+                    <a href="#experience" className="font-normal text-sm lg:text-lg text-black dark:text-white hover:text-orange-500 dark:hover:text-orange-400 transition cursor-pointer">Experience</a>
+                    <a href="#contacts" className="font-normal text-sm lg:text-lg text-black dark:text-white hover:text-orange-500 dark:hover:text-orange-400 transition cursor-pointer">Contacts</a>
+                    <a href="#open-source" className="font-normal text-sm lg:text-lg text-black dark:text-white hover:text-orange-500 dark:hover:text-orange-400 transition cursor-pointer">Open Source Work</a>
                 </div>
 
                 <div className="flex items-center gap-3 sm:gap-4">
@@ -79,10 +79,11 @@ export default function Navbar() {
                     exit={{ opacity: 0, height: 0 }}
                     className="md:hidden mt-2 bg-gray-100 dark:bg-[#2a2a2a] rounded-2xl p-4 flex flex-col gap-3 transition-colors"
                 >
-                    <h2 className="font-normal text-base text-black dark:text-white hover:text-orange-500 dark:hover:text-orange-400 transition cursor-pointer py-2">Home</h2>
-                    <h2 className="font-normal text-base text-black dark:text-white hover:text-orange-500 dark:hover:text-orange-400 transition cursor-pointer py-2">Projects</h2>
-                    <h2 className="font-normal text-base text-black dark:text-white hover:text-orange-500 dark:hover:text-orange-400 transition cursor-pointer py-2">Experience</h2>
-                    <h2 className="font-normal text-base text-black dark:text-white hover:text-orange-500 dark:hover:text-orange-400 transition cursor-pointer py-2">Contacts</h2>
+                    <a href="#home" onClick={() => setMobileMenuOpen(false)} className="font-normal text-base text-black dark:text-white hover:text-orange-500 dark:hover:text-orange-400 transition cursor-pointer py-2">Home</a>
+                    <a href="#projects" onClick={() => setMobileMenuOpen(false)} className="font-normal text-base text-black dark:text-white hover:text-orange-500 dark:hover:text-orange-400 transition cursor-pointer py-2">Projects</a>
+                    <a href="#experience" onClick={() => setMobileMenuOpen(false)} className="font-normal text-base text-black dark:text-white hover:text-orange-500 dark:hover:text-orange-400 transition cursor-pointer py-2">Experience</a>
+                    <a href="#contacts" onClick={() => setMobileMenuOpen(false)} className="font-normal text-base text-black dark:text-white hover:text-orange-500 dark:hover:text-orange-400 transition cursor-pointer py-2">Contacts</a>
+                    <a href="#open-source" onClick={() => setMobileMenuOpen(false)} className="font-normal text-base text-black dark:text-white hover:text-orange-500 dark:hover:text-orange-400 transition cursor-pointer py-2">Open Source Work</a>
                 </motion.div>
             )}
         </>

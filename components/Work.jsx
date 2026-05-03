@@ -151,7 +151,7 @@ export default function Work() {
     if (!mounted) return null;
     
     return (
-        <section className="py-16 sm:py-20 md:py-24 px-4 sm:px-6 md:px-12">
+        <section id="experience" className="py-16 sm:py-20 md:py-24 px-4 sm:px-6 md:px-12">
             {/* Section heading */}
             <motion.div
                 className="text-center mb-12 md:mb-20"

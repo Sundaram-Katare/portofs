@@ -23,7 +23,7 @@ export default function Hero() {
 
     return (
         <>
-            <div className="flex flex-col">
+            <div id="home" className="flex flex-col">
                 <AnimatePresence>
                     {showPopup && (
                         <motion.div
@@ -44,7 +44,7 @@ export default function Hero() {
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 lg:gap-20 justify-center h-full items-center">
                     {!showPopup && (
                         <motion.div
-                            className="flex flex-col p-4 sm:p-8 mt-8 md:mt-0 lg:mt-32 h-full max-w-4xl mx-auto text-center md:text-left"
+                            className="flex flex-col p-4 sm:p-8 mt-8 md:mt-0 h-full max-w-4xl mx-auto text-center md:text-left"
                             initial={{ opacity: 0, x: 80, rotate: 120, scale: 1.4 }}
                             animate={{ opacity: 1, x: 0, rotate: 0, scale: 1 }}
                             transition={{ duration: 0.6, delay: 1, }}
@@ -80,12 +80,12 @@ export default function Hero() {
                                 Experienced developer proficient in full-stack technologies, creating visually stunning and high-performance applications. Passionate about seamless user experiences and staying up-to-date with modern trends.
                             </p>
                             <div className="flex flex-col sm:flex-row gap-3 md:gap-4 mt-6 md:mt-8 lg:mt-10">
-                                <button className="bg-orange-500 hover:bg-orange-600 dark:hover:bg-orange-600 text-white px-4 sm:px-6 py-2 sm:py-3 rounded-lg font-semibold transition text-sm md:text-base">
+                                <a href="#projects" className="bg-orange-500 hover:bg-orange-600 dark:hover:bg-orange-600 text-white px-4 sm:px-6 py-2 sm:py-3 rounded-lg font-semibold transition text-sm md:text-base text-center">
                                     View Projects
-                                </button>
-                                <button className="border border-orange-500 text-orange-500 dark:border-orange-400 dark:text-orange-400 px-4 sm:px-6 py-2 sm:py-3 rounded-lg font-semibold hover:bg-orange-100 dark:hover:bg-orange-900/20 transition text-sm md:text-base">
+                                </a>
+                                <a href="#contacts" className="border border-orange-500 text-orange-500 dark:border-orange-400 dark:text-orange-400 px-4 sm:px-6 py-2 sm:py-3 rounded-lg font-semibold hover:bg-orange-100 dark:hover:bg-orange-900/20 transition text-sm md:text-base text-center">
                                     Contact
-                                </button>
+                                </a>
                             </div>
                         </motion.div>
 

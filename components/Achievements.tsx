@@ -49,7 +49,7 @@ const Achievements = () => {
   ];
 
   return (
-    <div className="bg-  dark:bg-[#0a0a0a] dark:text-white selection:bg-white selection:text-black">
+    <div id="open-source" className="bg-  dark:bg-[#0a0a0a] dark:text-white selection:bg-white selection:text-black">
       <ScrollSection className="text-center">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -92,8 +92,8 @@ const Achievements = () => {
 
               <OpenSourceCard
                 project="Lumin:  Online Quiz Platform with leaderboard"
-                contributors="4+"
-                prs="5+"
+                contributors="3+"
+                prs="3+"
                 url="https://github.com/Sundaram-Katare/Lumin"
               />
 

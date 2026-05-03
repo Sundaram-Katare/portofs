@@ -12,7 +12,7 @@ const projectData = [
     description: "FlowSpace was built with a People-First, Efficiency-Always mindset. In an era where teams are fragmented across multiple tools (one for chat, one for tasks, one for docs), FlowSpace aims to provide a unified workspace.",
     imageUrl: "./flow.png",
     gitHub: "https://github.com/Sundaram-Katare/Flow_Space",
-    live: "", 
+    live: "https://flowspace-smoky.vercel.app/", 
   },
   {
     id: 8,

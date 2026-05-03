@@ -6,6 +6,7 @@ import Projects from '../components/Projects';
 import Achievements from '../components/Achievements';
 import Work from '../components/Work';
 import Tech from '../components/Tech';
+import Contacts from '../components/Contacts';
 
 export default function Home() {
   return (
@@ -19,6 +20,7 @@ export default function Home() {
       </div>
       
       <Achievements />
+      <Contacts />
     </div>
   );
 }
