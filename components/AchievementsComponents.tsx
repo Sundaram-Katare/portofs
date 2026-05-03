@@ -5,8 +5,13 @@ import { motion } from "framer-motion";
 import CountUp from "react-countup";
 import { GitPullRequest, Trophy, Terminal, Users, Code2, MoveUpRight } from "lucide-react";
 
+interface ScrollSectionProps {
+  children: React.ReactNode;
+  className?: string;
+}
+
 // 1. ScrollSection Wrapper
-export const ScrollSection = ({ children, className = "" }) => {
+export const ScrollSection = ({ children, className = "" }: ScrollSectionProps) => {
   return (
     <motion.section
       initial={{ opacity: 0, y: 30 }}
@@ -20,8 +25,14 @@ export const ScrollSection = ({ children, className = "" }) => {
   );
 };
 
+interface HackathonCardProps {
+  title: string;
+  achievement: string;
+  date: string;
+}
+
 // 2. HackathonCard
-export const HackathonCard = ({ title, achievement, date }) => {
+export const HackathonCard = ({ title, achievement, date }: HackathonCardProps) => {
   return (
     <motion.div
       whileHover={{ scale: 1.02 }}
@@ -40,8 +51,14 @@ export const HackathonCard = ({ title, achievement, date }) => {
   );
 };
 
+interface StatsCounterProps {
+  value: number;
+  label: string;
+  subLabel?: string;
+}
+
 // 3. StatsCounter
-export const StatsCounter = ({ value, label, subLabel }) => {
+export const StatsCounter = ({ value, label, subLabel }: StatsCounterProps) => {
   return (
     <div className="text-center">
       <div className="text-7xl md:text-9xl font-bold text-white tracking-tighter mb-4">
@@ -58,8 +75,16 @@ export const StatsCounter = ({ value, label, subLabel }) => {
   );
 };
 
+interface OpenSourceCardProps {
+  contributors: string | number;
+  prs: string | number;
+  project: string;
+  url: string;
+  avatars?: string[];
+}
+
 // 4. OpenSourceCard
-export const OpenSourceCard = ({ contributors, prs, project, url, avatars = [] }) => {
+export const OpenSourceCard = ({ contributors, prs, project, url, avatars = [] }: OpenSourceCardProps) => {
   return (
     <motion.div
       whileHover={{ scale: 1.02 }}
@@ -117,8 +142,17 @@ export const OpenSourceCard = ({ contributors, prs, project, url, avatars = [] }
   );
 };
 
+interface PR {
+  repo: string;
+  title: string;
+}
+
+interface PRListProps {
+  prs: PR[];
+}
+
 // 5. PRList
-export const PRList = ({ prs }) => {
+export const PRList = ({ prs }: PRListProps) => {
   return (
     <div className="w-full max-w-2xl space-y-4">
       {prs.map((pr, index) => (
