@@ -7,6 +7,14 @@ import { useState, useEffect } from "react";
 
 const projectData = [
   {
+    id: 10,
+    title: "SellGenie",
+    description: "SellGenie is an advanced AI-powered sales copilot designed to help modern B2B sales teams close deals faster. By securely uploading your organization's sales playbooks, competitor battlecards, and past proposals, SellGenie provides your sales reps with an intelligent chat interface to instantly generate proposals, compare competitors, handle objections, and prepare for meetings.",
+    imageUrl: "./sell.png",
+    gitHub: "https://github.com/Sundaram-Katare/deal-assist",
+    live: "https://deal-assist-nine.vercel.app/", 
+  },
+  {
     id: 9,
     title: "FlowSpace",
     description: "FlowSpace was built with a People-First, Efficiency-Always mindset. In an era where teams are fragmented across multiple tools (one for chat, one for tasks, one for docs), FlowSpace aims to provide a unified workspace.",
@@ -59,15 +67,15 @@ const projectData = [
     gitHub: "https://github.com/Sundaram-Katare/Liluxe",
     live: "https://stylespot-orpin.vercel.app/",
   },
-  {
-    id: 5,
-    title: "S2T",
-    description:
-      "This is a real-time speech-to-text web application built using pure HTML, CSS, and JavaScript. It uses the Web Speech API to convert spoken words into text and features a live audio visualizer using the Web Audio API.",
-    imageUrl: "/s2t.png",
-    gitHub: "https://github.com/Sundaram-Katare/Speech-to-text",
-    live: "https://speech-to-text-nine-plum.vercel.app/",
-  },
+  // {
+  //   id: 5,
+  //   title: "S2T",
+  //   description:
+  //     "This is a real-time speech-to-text web application built using pure HTML, CSS, and JavaScript. It uses the Web Speech API to convert spoken words into text and features a live audio visualizer using the Web Audio API.",
+  //   imageUrl: "/s2t.png",
+  //   gitHub: "https://github.com/Sundaram-Katare/Speech-to-text",
+  //   live: "https://speech-to-text-nine-plum.vercel.app/",
+  // },
 ];
 
 function ProjectCard({ project, index }) {

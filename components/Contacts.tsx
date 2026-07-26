@@ -39,7 +39,7 @@ const Contacts = () => {
     }
   ];
 
-  const resumeLink = "https://drive.google.com/file/d/1_SBCjFnMmKCWMUavInqAe7v0UaVtMpu8/view?usp=sharing"; 
+  const resumeLink = "https://drive.google.com/file/d/1b-7FojxPGzotOw_-9hXLYLm3YlchoX7x/view?usp=sharing"; 
 
   return (
     <section id="contacts" className="py-24 px-6 md:px-12 lg:px-32 bg-white dark:bg-[#1a1a1a] transition-colors duration-300">

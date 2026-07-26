@@ -6,7 +6,15 @@ import { useEffect, useState } from "react";
 
 const workItems = [
     {
-        date: "Feb 2026 – Present",
+      date: "July 2026 - Present",
+      title: "Full Stack AI Engineer",
+      company: "PeSofts",
+      description:
+        "Engineered an AI-powered assessment backend leveraging Node.js, RAG, and LLMs for context-aware question generation. Developed a modular Next.js support platform featuring an LLM-optimized content architecture to scale GEO and SEO visibility across 100+ product pages",
+      tech: ["Next.js", "Node.js", "RAG", "LLMs", "Vector Embeddings", "SEO"],
+    },
+    {
+        date: "Feb 2026 – July 2026",
         title: "Full Stack Developer",
         company: "Legion Automations",
         description:
